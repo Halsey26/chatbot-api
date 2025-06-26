@@ -15,7 +15,7 @@ SUPABASE_KEY= os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 # print('prueba variables')
 
 app = FastAPI()
-app.title = 'API CHATBOT - FASTAPI - SUPABASE'
+app.title = 'API CHATBOT E-COMMERCE'
 
 class logs_chat(BaseModel):
     id_conversacion: str
