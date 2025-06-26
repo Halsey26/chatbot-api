@@ -50,10 +50,6 @@ def create_log(log:logs_chat):
     return {"status": response.status_code}
 
 
-if __name__ == "__main__":
-    import uvicorn
-    port = int(os.getenv("PORT", 8000))
-    uvicorn.run(app, host="0.0.0.0", port=port)
 
 # documentacion supabase para insert rows
 # curl -X POST 'https://bupbptppncwasereiuea.supabase.co/rest/v1/logs_chat' \
