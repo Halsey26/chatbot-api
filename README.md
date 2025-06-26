@@ -34,12 +34,16 @@ SUPABASE_SERVICE_ROLE=
 
 ---
 ## NOTAS:
-En supabase: En un proyecto debes crear una tabla con la misma estructura:
+1. En supabase: En un proyecto debes crear una tabla con la misma estructura:
 - id_conversacion: text
 - id_usuario: text
 - rol: text
 - mensaje: text
 - fecha: timestamp
 
-Luego de crear una tabla, ejemplo: `logs_chat`.
+    Luego de crear una tabla, ejemplo: `logs_chat`.
 Obtener las api key y almacenarla en .env
+
+2. Para el deploy en Render/Railway
+- Comando Start: 
+    `uvicorn main:app --host 0.0.0.0 --port 8000`
