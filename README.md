@@ -2,6 +2,7 @@
 
 Esta API recibe logs desde un [chatbot](https://github.com/Halsey26/chat_demo_ecommerce) y los envía a una base de datos Supabase.
 
+Deployado en Railway: [API](https://chatbot-api-production-9925.up.railway.app/docs#/Chatbot/create_log_logs_post)
 ## Instalación local
 
 ```bash

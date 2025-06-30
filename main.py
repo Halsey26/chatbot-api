@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from datetime import datetime
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware #cors para permitir conexión entre dominios
 import requests
 import os
 
@@ -16,6 +17,16 @@ SUPABASE_KEY= os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 
 app = FastAPI()
 app.title = 'API CHATBOT E-COMMERCE'
+
+# MIDDLEWARE CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # Dominio del chatbot, por el momento local
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 class logs_chat(BaseModel):
     id_conversacion: str
